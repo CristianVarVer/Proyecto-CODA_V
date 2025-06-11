@@ -28,6 +28,7 @@
    - [Sprint 2](#sprint-2)
    - [Sprint 3](#sprint-3)
 6. [Contacto](#contacto)
+7. [Estructura del Código en Java](#estructura-del-código-en-java)
 
 ---
 
@@ -130,6 +131,139 @@ Desarrollar un programa moderno, funcional y accesible que permita a las tiendas
 
 ---
 
+## Estructura Inicial del Código en Java
+
+## Estructura del Código en Java (Versión Explicativa)
+
+### 1. Clase Main
+
+Este es el archivo que inicia todo. Es como el botón de encendido del programa.
+
+- Cuando ejecutas el programa, `Main.java` crea una "pantalla" para que interactúes (la `InterfazUsuario`).
+- Luego, le dice a esa "pantalla" que comience a funcionar (`interfaz.ejecutar()`).
+
+**Paquete:** Raíz del proyecto  
+**Propósito:** Es el punto de entrada del programa.  
+**Método:**
+- `main(String[] args)`: crea un objeto de la clase `InterfazUsuario` y ejecuta el sistema con el método `ejecutar()`.
+
+💡 **Funcionalidad principal:**
+- Iniciar la ejecución del programa.
+- Es la puerta de entrada del sistema en Java y se ejecuta automáticamente al iniciar el programa.
+
+---
+
+### 2. Clase InterfazUsuario
+
+Es la **Pantalla Amigable**, este archivo se encarga de todo lo que ves y cómo interactúas con el programa.
+
+- Muestra un menú con opciones como:
+  - Agregar un nuevo producto.
+  - Ver todos los productos que tienes.
+  - Cambiar la información de un producto (ej. el precio o la cantidad).
+  - Quitar un producto del inventario.
+  - Calcular cuánto dinero valen todos tus productos juntos.
+  - Ver información sobre quién hizo el programa.
+  - Salir del programa.
+- Pide información: cuando eliges una opción como "Agregar producto", te pregunta cosas como el nombre del producto, cuántos tienes y su precio.
+- Muestra resultados: te enseña la lista de tus productos, te dice si un producto se agregó bien o si hubo un error.
+- Usa un `Scanner` para leer lo que escribes con el teclado.
+- Tiene una conexión a la lógica del inventario (`Inventario inventario = new Inventario();`).
+
+**Paquete:** `ui`  
+**Atributos:**
+- `scanner`: objeto que permite leer datos desde el teclado.
+- `inventario`: objeto de la clase `Inventario` que se usa para realizar operaciones.
+
+**Constructor:** Inicializa el objeto `scanner` y el objeto `inventario`.
+
+**Métodos:**
+- `mostrarMenu()`: presenta las opciones disponibles al usuario.
+- `ejecutar()`: contiene el ciclo principal que mantiene el programa en funcionamiento.
+- `agregarProducto()`, `consultarInventario()`, `actualizarProducto()`, `eliminarProducto()`
+- `calcularValorTotal()`: muestra el valor total del inventario.
+- `mostrarAcercaDe()`: presenta la información del equipo.
+- `obtenerNumeroEntero()`, `obtenerNumeroDouble()`: validan y reciben datos numéricos.
+- `esperarEnter()`: hace una pausa antes de volver al menú.
+
+💡 **Funcionalidad principal:**
+- Mostrar el menú y recibir acciones del usuario desde consola.
+- Es el puente entre el usuario y la lógica del sistema (`Inventario`).
+- Controla la entrada de datos, muestra resultados y valida que la información sea correcta.
+
+---
+
+### 3. Clase Inventario
+
+Es el **Cerebro del Almacén**, este archivo maneja la lista de productos y hace todas las operaciones importantes. No lo ves directamente, pero la `InterfazUsuario` habla con él.
+
+- Guarda los productos en una lista (`List<Producto> productos`) donde se almacenan todos los productos que vas agregando.
+
+**Paquete:** `negocio`  
+**Atributo:**
+- `productos`: lista de tipo `ArrayList<Producto>` que almacena todos los productos registrados.
+
+**Constructor:** Inicializa la lista `productos` como un nuevo `ArrayList`.
+
+**Métodos:**
+- `agregarProducto()`: añade un producto si el ID no está repetido.
+- `consultarInventario()`: devuelve todos los productos.
+- `actualizarProducto(id, nuevoNombre, nuevaCantidad, nuevoPrecio)`: cambia los datos de un producto existente.
+- `eliminarProducto(id)`: elimina el producto con ese ID.
+- `obtenerProductoPorId(id)`: busca y devuelve un producto por su ID.
+- `calcularValorTotal()`: multiplica cantidad × precio por producto y devuelve el total.
+
+💡 **Funcionalidad principal:**
+- Administrar la lista completa de productos del inventario.
+- Gestiona todas las operaciones básicas: agregar, consultar, actualizar y eliminar productos.
+- Verifica duplicados y calcula el valor total del inventario.
+
+---
+
+### 4. Clase Producto
+
+Es la **Plantilla del Producto**, este archivo es como una ficha que define cómo es un producto.
+
+Cada producto tiene:
+- Un ID: código único para identificarlo (ej. `"A001"`).
+- Un nombre: como `"Leche"` o `"Pan"`.
+- Una cantidad: cuántas unidades tienes (ej. `10`).
+- Un precio: cuánto cuesta cada unidad (ej. `2.50`).
+
+También incluye funciones (`getters` y `setters`) para ver o cambiar estos datos.  
+Ejemplo: `getNombre()` te da el nombre del producto, `setPrecio()` te permite cambiar su precio.
+
+**Paquete:** `modelo`  
+**Atributos:**
+- `id`: identificador único del producto (tipo `String`).
+- `nombre`: nombre del producto.
+- `cantidad`: cantidad disponible en stock.
+- `precio`: precio por unidad.
+
+**Constructor:** Crea un nuevo objeto `Producto`, inicializando sus valores.
+
+**Métodos:**
+- **Getters:** permiten acceder a los valores privados desde fuera de la clase.
+- **Setters:** permiten modificar los atributos `nombre`, `cantidad` y `precio`.
+
+💡 **Funcionalidad principal:**
+- Almacenar y gestionar información básica sobre los productos.
+- Define la estructura que deben tener los productos en la aplicación.
+- Solo se pueden acceder o modificar mediante los métodos `get` y `set`.
+
+---
+
+## Diseño del Código en Java
+
+**¿Cómo funciona todo junto?**
+
+1. Ejecutas `Main.java`.
+2. `Main` crea y muestra la `InterfazUsuario`.
+3. La `InterfazUsuario` te muestra el menú. Tú eliges una opción (por ejemplo, "Agregar producto").
+4. La `InterfazUsu
+
+
+---
 ## Contacto
 
 **Teléfono:** 3125860277  
