@@ -1,4 +1,7 @@
-![image alt](https://raw.githubusercontent.com/CristianVarVer/Proyecto-CODA_V/e0e59307f3dad8654486b3b71cba306509095f8d/Logo%20CODA-V.jpg?token=BTCBO4JA7UJHJVDADX5RQHTIJDFZW)
+<p align="right">
+  <img src="Logotipo CODA-V.jpg" alt="Logo CODA-V" width="150">
+</p>
+
 # CODA-V
 
 ## Sistema de Gestión de Inventario
