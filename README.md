@@ -29,7 +29,7 @@
    - [Sprint 3](#sprint-3)
 6. [Contacto](#contacto)
 7. [Estructura del Código en Java](#estructura-del-código-en-java)
-
+8. [Diseño del Código en Java](#diseño-del-código-en-java)
 ---
 
 ## Ficha Técnica del Equipo
@@ -133,7 +133,7 @@ Desarrollar un programa moderno, funcional y accesible que permita a las tiendas
 
 ## Estructura Inicial del Código en Java
 
-## Estructura del Código en Java (Versión Explicativa)
+## Estructura del Código en Java
 
 ### 1. Clase Main
 
@@ -253,14 +253,14 @@ Ejemplo: `getNombre()` te da el nombre del producto, `setPrecio()` te permite ca
 
 ---
 
-## Diseño del Código en Java
+##  Diseño del Código en Java
 
 **¿Cómo funciona todo junto?**
 
 1. Ejecutas `Main.java`.
 2. `Main` crea y muestra la `InterfazUsuario`.
 3. La `InterfazUsuario` te muestra el menú. Tú eliges una opción (por ejemplo, "Agregar producto").
-4. La `InterfazUsu
+4. La `InterfazUsuario` te pide los datos del producto (ID, nombre, cantidad, precio).
 
 
 ---
