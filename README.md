@@ -1,5 +1,5 @@
 <p align="right">
-  <img src="https://raw.githubusercontent.com/CristianVarVer/Proyecto-CODA_V/e0e59307f3dad8654486b3b71cba306509095f8d/Logo%20CODA-V.jpg?token=BTCBO4JTADR2KJC7MFL2HELIJDIHM" width="150">
+  <img src="https://raw.githubusercontent.com/CristianVarVer/Proyecto-CODA_V/e0e59307f3dad8654486b3b71cba306509095f8d/Logo%20CODA-V.jpg?token=BTCBO4NEUTM2UMCWZXSJYNLIJGT6E">
 </p>
 
 # CODA-V
@@ -27,9 +27,9 @@
    - [Sprint 1](#sprint-1)
    - [Sprint 2](#sprint-2)
    - [Sprint 3](#sprint-3)
-6. [Contacto](#contacto)
-7. [Estructura del Código en Java](#estructura-del-código-en-java)
-8. [Diseño del Código en Java](#diseño-del-código-en-java)
+6. [Estructura del Código en Java](#estructura-del-código-en-java)
+7. [Diseño del Código en Java](#diseño-del-código-en-java)
+8. [Contacto](#contacto)
 ---
 
 ## Ficha Técnica del Equipo
@@ -39,7 +39,7 @@
 **Logo:**
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/CristianVarVer/Proyecto-CODA_V/e0e59307f3dad8654486b3b71cba306509095f8d/Logo%20CODA-V.jpg?token=BTCBO4JTADR2KJC7MFL2HELIJDIHM">
+  <img src="https://raw.githubusercontent.com/CristianVarVer/Proyecto-CODA_V/e0e59307f3dad8654486b3b71cba306509095f8d/Logo%20CODA-V.jpg?token=BTCBO4NEUTM2UMCWZXSJYNLIJGT6E">
 </p>
 
 **Eslogan del Proyecto:** “Ordena, controla, evoluciona”
@@ -151,6 +151,10 @@ Es el punto de partida del programa, donde todo comienza.
 💡 **Funcionalidad principal:**
 - Es el punto de entrada de todo el sistema.
 - Controla si se muestra o no la aplicación según el resultado del login.
+  
+<p align="center">
+  <img src="https://raw.githubusercontent.com/CristianVarVer/Proyecto-CODA_V/fc09204107dc56b66670faec1f124a87e4c56316/Clase%20Main.png?token=BTCBO4LJRCS5VJRTB7NTN3LIJGT7W">
+</p>
 
 ---
 
@@ -179,6 +183,9 @@ Es la ventana emergente que permite iniciar sesión en el sistema.
 - Controlar el acceso al sistema.
 - Permitir tanto login como registro de nuevos usuarios.
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/CristianVarVer/Proyecto-CODA_V/fc09204107dc56b66670faec1f124a87e4c56316/Clase%20Dialogo%20Login.png?token=BTCBO4IU5O6TGCUYKTYCVJLIJGT7W">
+</p>
 ---
 
 ### 3. Clase DialogoRegistro
@@ -205,6 +212,9 @@ Es la ventana que se abre desde el login para crear un nuevo usuario.
 - Registrar nuevos usuarios de forma segura y validada.
 - Actualizar los datos de usuarios disponibles.
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/CristianVarVer/Proyecto-CODA_V/fc09204107dc56b66670faec1f124a87e4c56316/Clase%20Dialogo%20Registro.png?token=BTCBO4OBI5A5BVYPQ5PXGQDIJGT7W">
+</p>
 ---
 
 ### 4. Clase Usuario
@@ -225,6 +235,10 @@ Es la plantilla base para los usuarios del sistema.
 💡 **Funcionalidad principal:**
 - Representar a un usuario del sistema.
 - Ser utilizado para validar el acceso mediante login.
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/CristianVarVer/Proyecto-CODA_V/fc09204107dc56b66670faec1f124a87e4c56316/Clase%20Usuario.png?token=BTCBO4KSW6VFD56ON6FMEZ3IJGT7W">
+</p>
 
 ---
 
@@ -251,6 +265,10 @@ Es la ventana principal del sistema, donde se muestra y gestiona todo el inventa
 - Es la interfaz visual central del programa.
 - Permite al usuario gestionar fácilmente los productos desde una tabla interactiva.
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/CristianVarVer/Proyecto-CODA_V/fc09204107dc56b66670faec1f124a87e4c56316/Clase%20Interfaz%20Grafica.png?token=BTCBO4OOMZ5YVLHER47JCWLIJGT7W">
+</p>
+
 ---
 
 ### 6. Clase DialogoAgregarProducto
@@ -274,6 +292,10 @@ Es la ventana que se abre para agregar un nuevo producto.
 💡 **Funcionalidad principal:**
 - Permitir añadir productos nuevos de forma segura y validada.
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/CristianVarVer/Proyecto-CODA_V/fc09204107dc56b66670faec1f124a87e4c56316/Clase%20Dialogo%20Agregar%20Producto.png?token=BTCBO4IWXQLDXPGJ7YB4AIDIJGT7W">
+</p>
+
 ---
 
 ### 7. Clase DialogoActualizarProducto
@@ -296,6 +318,10 @@ Ventana emergente para editar un producto ya existente.
 💡 **Funcionalidad principal:**
 - Facilitar la edición de un producto del inventario de forma controlada.
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/CristianVarVer/Proyecto-CODA_V/fc09204107dc56b66670faec1f124a87e4c56316/Clase%20Diaologo%20Actualizar%20Producto.png?token=BTCBO4OBADKS5F33GPN4F63IJGT7W">
+</p>
+
 ---
 
 ### 8. Clase Producto
@@ -316,6 +342,10 @@ Es la ficha técnica de cada producto.
 💡 **Funcionalidad principal:**
 - Representar cada producto como objeto independiente.
 - Ser utilizado por las interfaces para mostrar y modificar datos.
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/CristianVarVer/Proyecto-CODA_V/fc09204107dc56b66670faec1f124a87e4c56316/Clase%20Producto.png?token=BTCBO4JKHTYEFGJXXZG3TCLIJGT7W">
+</p>
 
 ---
 
@@ -340,6 +370,10 @@ Es el motor lógico del sistema que gestiona todos los productos.
 - Gestionar internamente el inventario y sus operaciones.
 - Servir de puente entre la interfaz y los datos reales.
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/CristianVarVer/Proyecto-CODA_V/fc09204107dc56b66670faec1f124a87e4c56316/Clase%20Inventario.png?token=BTCBO4OP5M3FFBZGVICQXADIJGT7W">
+</p>
+
 ---
 
 ### 10. Clase ManejadorDatos
@@ -361,6 +395,9 @@ Es el encargado de guardar y cargar datos desde archivos.
 - Hacer que los datos persistan entre sesiones del programa.
 - Facilitar el almacenamiento automático de usuarios y productos.
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/CristianVarVer/Proyecto-CODA_V/fc09204107dc56b66670faec1f124a87e4c56316/Clase%20Manejador%20Datos.png?token=BTCBO4P6YFKHA2OEFAUB5D3IJGT7W">
+</p>
 
 ---
 
@@ -377,6 +414,9 @@ Es el encargado de guardar y cargar datos desde archivos.
    - Eliminar, consultar o ver el valor total del inventario.
 5. Todo lo que haces se gestiona con la lógica de `Inventario` y se guarda gracias a `ManejadorDatos`.
 
+<p align="left">
+  <img src="https://raw.githubusercontent.com/CristianVarVer/Proyecto-CODA_V/fc09204107dc56b66670faec1f124a87e4c56316/Diagrama%20UML-%20CODA-V.png?token=BTCBO4JAR66RCCPNGBBVSQTIJGT7W">
+</p>
 
 ---
 ## Contacto
