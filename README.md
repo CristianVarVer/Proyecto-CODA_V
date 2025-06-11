@@ -1,8 +1,8 @@
 # CODA-V
 ## Sistema de Gestión de Inventario
-<p align="right">
+
 ![image alt](https://raw.githubusercontent.com/CristianVarVer/Proyecto-CODA_V/e0e59307f3dad8654486b3b71cba306509095f8d/Logo%20CODA-V.jpg?token=BTCBO4PIWBRB7IDD3USNKCTIJDGYI)
-</p>
+
 ### Fundamentos de Programación 2.025
 
 **Autores:**  
