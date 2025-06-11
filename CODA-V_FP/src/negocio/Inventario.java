@@ -1,13 +1,12 @@
 package negocio;
 
 import modelo.Producto;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Clase que gestiona la lista de productos en el inventario
- */
-public class Inventario {
+
+public class Inventario implements Serializable {
     private List<Producto> productos;
 
     public Inventario() {

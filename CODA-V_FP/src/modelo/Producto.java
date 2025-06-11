@@ -1,6 +1,9 @@
 package modelo;
 
-public class Producto {
+import java.io.Serializable;
+
+
+public class Producto implements Serializable {
     private String id;
     private String nombre;
     private int cantidad;
@@ -13,12 +16,15 @@ public class Producto {
      * @param cantidad Cantidad disponible
      * @param precio Precio del producto
      */
+
+
     public Producto(String id, String nombre, int cantidad, double precio) {
         this.id = id;
         this.nombre = nombre;
         this.cantidad = cantidad;
         this.precio = precio;
     }
+
 
     // Getters y setters
     public String getId() { return id; }

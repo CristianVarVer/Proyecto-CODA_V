@@ -15,7 +15,7 @@ public class DialogoAgregarProducto extends JDialog {
     public DialogoAgregarProducto(Frame owner, Inventario inventario) {
         super(owner, "Agregar Nuevo Producto", true);
         this.inventario = inventario;
-        // ... el resto del constructor no cambia ...
+
         setLayout(new BorderLayout(10, 10));
         setSize(400, 250);
         setLocationRelativeTo(owner);

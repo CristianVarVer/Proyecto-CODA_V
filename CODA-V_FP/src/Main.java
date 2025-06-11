@@ -1,23 +1,38 @@
+import modelo.Usuario;
+import negocio.Inventario;
+import negocio.ManejadorDatos;
+import ui.DialogoLogin;
 import ui.InterfazGrafica;
+
 import javax.swing.SwingUtilities;
 import javax.swing.UIManager;
 
-/**
- * Clase principal que inicia la aplicación de gestión de inventario.
- */
 public class Main {
     public static void main(String[] args) {
-        // Ejecuta la creación de la GUI en el hilo de despacho de eventos de Swing para seguridad.
         SwingUtilities.invokeLater(() -> {
             try {
-                // Opcional: Establece un look and feel más moderno que el default de Java.
                 UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
             } catch (Exception e) {
-                // Si no se puede establecer el look and feel del sistema, no es un error crítico.
                 System.err.println("No se pudo establecer el Look and Feel del sistema.");
             }
-            // Crea y muestra la ventana principal.
-            new InterfazGrafica().setVisible(true);
+
+            // 1. Mostrar el diálogo de login primero
+            DialogoLogin dialogoLogin = new DialogoLogin(null);
+            dialogoLogin.setVisible(true);
+
+            // 2. Comprobar si el login fue exitoso
+            Usuario usuario = dialogoLogin.getUsuarioAutenticado();
+            if (usuario != null) {
+                // 3. Si fue exitoso, cargar el inventario y mostrar la ventana principal
+                System.out.println("Login exitoso para: " + usuario.getNombreUsuario());
+                Inventario inventario = ManejadorDatos.cargarInventario();
+                InterfazGrafica interfaz = new InterfazGrafica(inventario);
+                interfaz.setVisible(true);
+            } else {
+                // 4. Si el usuario cerró el diálogo o falló, la aplicación termina.
+                System.out.println("Login cancelado o fallido. Saliendo de la aplicación.");
+                System.exit(0);
+            }
         });
     }
 }
