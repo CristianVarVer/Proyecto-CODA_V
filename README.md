@@ -131,125 +131,236 @@ Desarrollar un programa moderno, funcional y accesible que permita a las tiendas
 
 ---
 
-## Estructura Inicial del Código en Java
-
 ## Estructura del Código en Java
+
+---
 
 ### 1. Clase Main
 
-Este es el archivo que inicia todo. Es como el botón de encendido del programa.
+Es el punto de partida del programa, donde todo comienza.
 
-- Cuando ejecutas el programa, `Main.java` crea una "pantalla" para que interactúes (la `InterfazUsuario`).
-- Luego, le dice a esa "pantalla" que comience a funcionar (`interfaz.ejecutar()`).
+- Lanza primero una ventana de login (`DialogoLogin`) para validar al usuario.
+- Si el usuario se autentica correctamente, carga el inventario guardado y muestra la interfaz principal (`InterfazGrafica`).
+- Si falla el login o se cancela, el programa finaliza automáticamente.
 
 **Paquete:** Raíz del proyecto  
-**Propósito:** Es el punto de entrada del programa.  
+**Propósito:** Iniciar la ejecución del sistema de gestión de inventario.  
 **Método:**
-- `main(String[] args)`: crea un objeto de la clase `InterfazUsuario` y ejecuta el sistema con el método `ejecutar()`.
+- `main(String[] args)`: Muestra la ventana de inicio de sesión. Si el usuario se autentica correctamente, muestra la interfaz principal con el inventario cargado.
 
 💡 **Funcionalidad principal:**
-- Iniciar la ejecución del programa.
-- Es la puerta de entrada del sistema en Java y se ejecuta automáticamente al iniciar el programa.
+- Es el punto de entrada de todo el sistema.
+- Controla si se muestra o no la aplicación según el resultado del login.
 
 ---
 
-### 2. Clase InterfazUsuario
+### 2. Clase DialogoLogin
 
-Es la **Pantalla Amigable**, este archivo se encarga de todo lo que ves y cómo interactúas con el programa.
+Es la ventana emergente que permite iniciar sesión en el sistema.
 
-- Muestra un menú con opciones como:
-  - Agregar un nuevo producto.
-  - Ver todos los productos que tienes.
-  - Cambiar la información de un producto (ej. el precio o la cantidad).
-  - Quitar un producto del inventario.
-  - Calcular cuánto dinero valen todos tus productos juntos.
-  - Ver información sobre quién hizo el programa.
-  - Salir del programa.
-- Pide información: cuando eliges una opción como "Agregar producto", te pregunta cosas como el nombre del producto, cuántos tienes y su precio.
-- Muestra resultados: te enseña la lista de tus productos, te dice si un producto se agregó bien o si hubo un error.
-- Usa un `Scanner` para leer lo que escribes con el teclado.
-- Tiene una conexión a la lógica del inventario (`Inventario inventario = new Inventario();`).
+- Muestra un formulario para ingresar usuario y contraseña.
+- Compara con los datos guardados en el archivo de usuarios.
+- Si las credenciales son válidas, permite el acceso.
+- También ofrece un botón para registrar un nuevo usuario.
 
 **Paquete:** `ui`  
 **Atributos:**
-- `scanner`: objeto que permite leer datos desde el teclado.
-- `inventario`: objeto de la clase `Inventario` que se usa para realizar operaciones.
+- `campoUsuario`, `campoContrasena`: campos para ingresar datos.
+- `usuarios`: mapa de usuarios registrados.
+- `usuarioAutenticado`: guarda el usuario que inicia sesión correctamente.
 
-**Constructor:** Inicializa el objeto `scanner` y el objeto `inventario`.
-
+**Constructor:** Configura la interfaz visual del login y carga los usuarios.  
 **Métodos:**
-- `mostrarMenu()`: presenta las opciones disponibles al usuario.
-- `ejecutar()`: contiene el ciclo principal que mantiene el programa en funcionamiento.
-- `agregarProducto()`, `consultarInventario()`, `actualizarProducto()`, `eliminarProducto()`
-- `calcularValorTotal()`: muestra el valor total del inventario.
-- `mostrarAcercaDe()`: presenta la información del equipo.
-- `obtenerNumeroEntero()`, `obtenerNumeroDouble()`: validan y reciben datos numéricos.
-- `esperarEnter()`: hace una pausa antes de volver al menú.
+- `intentarLogin()`: verifica las credenciales ingresadas.
+- `abrirRegistro()`: abre la ventana de registro de usuario.
+- `getUsuarioAutenticado()`: devuelve el usuario si el login fue exitoso.
 
 💡 **Funcionalidad principal:**
-- Mostrar el menú y recibir acciones del usuario desde consola.
-- Es el puente entre el usuario y la lógica del sistema (`Inventario`).
-- Controla la entrada de datos, muestra resultados y valida que la información sea correcta.
+- Controlar el acceso al sistema.
+- Permitir tanto login como registro de nuevos usuarios.
 
 ---
 
-### 3. Clase Inventario
+### 3. Clase DialogoRegistro
 
-Es el **Cerebro del Almacén**, este archivo maneja la lista de productos y hace todas las operaciones importantes. No lo ves directamente, pero la `InterfazUsuario` habla con él.
+Es la ventana que se abre desde el login para crear un nuevo usuario.
 
-- Guarda los productos en una lista (`List<Producto> productos`) donde se almacenan todos los productos que vas agregando.
+- Permite ingresar un nombre de usuario y contraseña.
+- Verifica que no se repita el nombre de usuario y que las contraseñas coincidan.
+- Si todo es correcto, guarda el nuevo usuario en el mapa y lo retorna al login.
 
-**Paquete:** `negocio`  
-**Atributo:**
-- `productos`: lista de tipo `ArrayList<Producto>` que almacena todos los productos registrados.
-
-**Constructor:** Inicializa la lista `productos` como un nuevo `ArrayList`.
+**Paquete:** `ui`  
+**Atributos:**
+- `campoUsuario`, `campoContrasena`, `campoConfirmarContrasena`
+- `usuarios`: mapa con los usuarios existentes.
+- `usuarioNuevo`: guarda el usuario recién creado.
 
 **Métodos:**
-- `agregarProducto()`: añade un producto si el ID no está repetido.
-- `consultarInventario()`: devuelve todos los productos.
-- `actualizarProducto(id, nuevoNombre, nuevaCantidad, nuevoPrecio)`: cambia los datos de un producto existente.
-- `eliminarProducto(id)`: elimina el producto con ese ID.
-- `obtenerProductoPorId(id)`: busca y devuelve un producto por su ID.
-- `calcularValorTotal()`: multiplica cantidad × precio por producto y devuelve el total.
+- `registrarUsuario()`: valida los datos y crea el nuevo usuario.
+- `getUsuariosActualizados()`: devuelve el mapa de usuarios modificado.
+- `getUsuarioNuevo()`: devuelve el nuevo usuario registrado.
+- `isRegistrado()`: indica si se completó el registro.
 
 💡 **Funcionalidad principal:**
-- Administrar la lista completa de productos del inventario.
-- Gestiona todas las operaciones básicas: agregar, consultar, actualizar y eliminar productos.
-- Verifica duplicados y calcula el valor total del inventario.
+- Registrar nuevos usuarios de forma segura y validada.
+- Actualizar los datos de usuarios disponibles.
 
 ---
 
-### 4. Clase Producto
+### 4. Clase Usuario
 
-Es la **Plantilla del Producto**, este archivo es como una ficha que define cómo es un producto.
+Es la plantilla base para los usuarios del sistema.
 
-Cada producto tiene:
-- Un ID: código único para identificarlo (ej. `"A001"`).
-- Un nombre: como `"Leche"` o `"Pan"`.
-- Una cantidad: cuántas unidades tienes (ej. `10`).
-- Un precio: cuánto cuesta cada unidad (ej. `2.50`).
-
-También incluye funciones (`getters` y `setters`) para ver o cambiar estos datos.  
-Ejemplo: `getNombre()` te da el nombre del producto, `setPrecio()` te permite cambiar su precio.
+- Cada usuario tiene un nombre y una contraseña.
+- Es utilizado por el sistema para autenticar el acceso.
 
 **Paquete:** `modelo`  
 **Atributos:**
-- `id`: identificador único del producto (tipo `String`).
-- `nombre`: nombre del producto.
-- `cantidad`: cantidad disponible en stock.
-- `precio`: precio por unidad.
+- `nombreUsuario`, `contrasena`
 
-**Constructor:** Crea un nuevo objeto `Producto`, inicializando sus valores.
-
+**Constructor:** Inicializa un nuevo usuario con los datos ingresados.  
 **Métodos:**
-- **Getters:** permiten acceder a los valores privados desde fuera de la clase.
-- **Setters:** permiten modificar los atributos `nombre`, `cantidad` y `precio`.
+- `getNombreUsuario()`, `getContrasena()`
 
 💡 **Funcionalidad principal:**
-- Almacenar y gestionar información básica sobre los productos.
-- Define la estructura que deben tener los productos en la aplicación.
-- Solo se pueden acceder o modificar mediante los métodos `get` y `set`.
+- Representar a un usuario del sistema.
+- Ser utilizado para validar el acceso mediante login.
+
+---
+
+### 5. Clase InterfazGrafica
+
+Es la ventana principal del sistema, donde se muestra y gestiona todo el inventario.
+
+- Muestra una tabla con todos los productos registrados.
+- Tiene botones para agregar, actualizar, eliminar y ver el valor total del inventario.
+- También permite abrir un diálogo con información sobre el sistema.
+
+**Paquete:** `ui`  
+**Atributos:**
+- `inventario`: lógica de productos.
+- `tabla`: tabla visual de productos.
+- `modeloTabla`: modelo de datos para la tabla.
+
+**Métodos:**
+- `abrirDialogoAgregar()`, `abrirDialogoActualizar()`, `eliminarProducto()`
+- `mostrarValorTotal()`, `mostrarAcercaDe()`
+- `refrescarTabla()`
+
+💡 **Funcionalidad principal:**
+- Es la interfaz visual central del programa.
+- Permite al usuario gestionar fácilmente los productos desde una tabla interactiva.
+
+---
+
+### 6. Clase DialogoAgregarProducto
+
+Es la ventana que se abre para agregar un nuevo producto.
+
+- Pide ID, nombre, cantidad y precio.
+- Valida que los datos sean correctos y no estén duplicados.
+- Si todo va bien, crea y guarda el nuevo producto en el inventario.
+
+**Paquete:** `ui`  
+**Atributos:**
+- Campos de entrada para los datos del producto.
+- `inventario`: referencia para agregar el producto.
+- `agregado`: indica si el producto fue añadido.
+
+**Métodos:**
+- `agregarProducto()`: realiza las validaciones y añade el producto.
+- `isAgregado()`, `getProducto()`
+
+💡 **Funcionalidad principal:**
+- Permitir añadir productos nuevos de forma segura y validada.
+
+---
+
+### 7. Clase DialogoActualizarProducto
+
+Ventana emergente para editar un producto ya existente.
+
+- Muestra los datos del producto (ID, nombre, cantidad, precio).
+- Permite cambiar nombre, cantidad y precio (el ID no se puede modificar).
+- Valida los datos antes de aplicar los cambios.
+
+**Paquete:** `ui`  
+**Atributos:**
+- Campos de entrada con los datos del producto.
+- `productoOriginal`, `productoActualizado`
+
+**Métodos:**
+- `actualizarProducto()`: valida y actualiza el producto.
+- `isActualizado()`, `getProductoActualizado()`
+
+💡 **Funcionalidad principal:**
+- Facilitar la edición de un producto del inventario de forma controlada.
+
+---
+
+### 8. Clase Producto
+
+Es la ficha técnica de cada producto.
+
+- Contiene el ID, nombre, cantidad y precio de cada producto.
+- Se utiliza para representar y mostrar cada producto del inventario.
+
+**Paquete:** `modelo`  
+**Atributos:**
+- `id`, `nombre`, `cantidad`, `precio`
+
+**Constructor:** Inicializa un nuevo producto con los datos ingresados.  
+**Métodos:**
+- Getters y Setters para todos los atributos (excepto el ID que no cambia)
+
+💡 **Funcionalidad principal:**
+- Representar cada producto como objeto independiente.
+- Ser utilizado por las interfaces para mostrar y modificar datos.
+
+---
+
+### 9. Clase Inventario
+
+Es el motor lógico del sistema que gestiona todos los productos.
+
+- Usa una lista para guardar todos los productos.
+- Permite agregar, buscar, actualizar, eliminar y calcular el valor total.
+
+**Paquete:** `negocio`  
+**Atributo:**
+- `productos`: lista `ArrayList<Producto>`
+
+**Constructor:** Crea la lista de productos vacía.  
+**Métodos:**
+- `agregarProducto()`, `consultarInventario()`
+- `actualizarProducto()`, `eliminarProducto()`
+- `obtenerProductoPorId()`, `calcularValorTotal()`
+
+💡 **Funcionalidad principal:**
+- Gestionar internamente el inventario y sus operaciones.
+- Servir de puente entre la interfaz y los datos reales.
+
+---
+
+### 10. Clase ManejadorDatos
+
+Es el encargado de guardar y cargar datos desde archivos.
+
+- Usa la serialización para almacenar el inventario y los usuarios.
+- Guarda los datos en archivos `.dat` y los recupera cuando se necesita.
+
+**Paquete:** `negocio`  
+**Constantes:**
+- `ARCHIVO_INVENTARIO`, `ARCHIVO_USUARIOS`
+
+**Métodos:**
+- `guardarInventario()`, `cargarInventario()`
+- `guardarUsuarios()`, `cargarUsuarios()`
+
+💡 **Funcionalidad principal:**
+- Hacer que los datos persistan entre sesiones del programa.
+- Facilitar el almacenamiento automático de usuarios y productos.
+
 
 ---
 
@@ -258,9 +369,13 @@ Ejemplo: `getNombre()` te da el nombre del producto, `setPrecio()` te permite ca
 **¿Cómo funciona todo junto?**
 
 1. Ejecutas `Main.java`.
-2. `Main` crea y muestra la `InterfazUsuario`.
-3. La `InterfazUsuario` te muestra el menú. Tú eliges una opción (por ejemplo, "Agregar producto").
-4. La `InterfazUsuario` te pide los datos del producto (ID, nombre, cantidad, precio).
+2. Se abre la ventana de login (`DialogoLogin`).
+3. Si te autenticas correctamente, se carga el inventario guardado y aparece la ventana principal (`InterfazGrafica`).
+4. Desde allí puedes:
+   - Agregar productos (`DialogoAgregarProducto`)
+   - Modificar productos (`DialogoActualizarProducto`)
+   - Eliminar, consultar o ver el valor total del inventario.
+5. Todo lo que haces se gestiona con la lógica de `Inventario` y se guarda gracias a `ManejadorDatos`.
 
 
 ---
