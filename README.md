@@ -1,5 +1,5 @@
 <p align="right">
-  <img src="https://raw.githubusercontent.com/CristianVarVer/Proyecto-CODA_V/e0e59307f3dad8654486b3b71cba306509095f8d/Logo%20CODA-V.jpg?token=BTCBO4PIWBRB7IDD3USNKCTIJDGYI" alt="Logo CODA-V" width="150">
+  <img src="https://raw.githubusercontent.com/CristianVarVer/Proyecto-CODA_V/e0e59307f3dad8654486b3b71cba306509095f8d/Logo%20CODA-V.jpg?token=BTCBO4JTADR2KJC7MFL2HELIJDIHM" width="150">
 </p>
 
 # CODA-V
@@ -38,7 +38,7 @@
 **Logo:**
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/CristianVarVer/Proyecto-CODA_V/e0e59307f3dad8654486b3b71cba306509095f8d/Logo%20CODA-V.jpg?token=BTCBO4PIWBRB7IDD3USNKCTIJDGYI" alt="Logo CODA-V" width="200">
+  <img src="https://raw.githubusercontent.com/CristianVarVer/Proyecto-CODA_V/e0e59307f3dad8654486b3b71cba306509095f8d/Logo%20CODA-V.jpg?token=BTCBO4JTADR2KJC7MFL2HELIJDIHM">
 </p>
 
 **Eslogan del Proyecto:** “Ordena, controla, evoluciona”
