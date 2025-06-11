@@ -29,7 +29,9 @@
    - [Sprint 3](#sprint-3)
 6. [Estructura del Código en Java](#estructura-del-código-en-java)
 7. [Diseño del Código en Java](#diseño-del-código-en-java)
-8. [Contacto](#contacto)
+8. [Tecnologías Utilizadas](#tecnologías-utilizadas)
+9. [¿Cómo Ejecutar el Proyecto?](#¡cómo-ejecutar-el-proyecto)
+10. [Contacto](#contacto)
 ---
 
 ## Ficha Técnica del Equipo
@@ -419,6 +421,56 @@ Es el encargado de guardar y cargar datos desde archivos.
 </p>
 
 ---
+
+## Tecnologías Utilizadas
+
+- **Java 8+**
+- **Java Swing**: Para la interfaz gráfica de usuario.
+- **POO (Programación Orientada a Objetos)**: Modelo de diseño basado en clases.
+- **Serialización de Objetos**: Para guardar y cargar datos de usuarios e inventario.
+- **Manejo de archivos binarios (.dat)**: Persistencia de datos.
+- **NetBeans / IntelliJ IDEA / Eclipse**: Recomendado para desarrollo y pruebas.
+- **Sistema de control de versiones Git** (repositorio en GitHub).
+
+---
+
+## Cómo Ejecutar el Proyecto
+
+### 🖥️ Requisitos previos
+
+- Tener instalado **Java JDK 8 o superior**
+- Tener un IDE como **NetBeans**, **IntelliJ IDEA** o **Eclipse**
+- Descargar o clonar el repositorio de GitHub
+
+
+### 🚀 Cómo Ejecutar el Proyecto
+
+**Pasos para usar el sistema**
+
+1. Abre el proyecto en tu editor o entorno de desarrollo favorito (como **NetBeans**, **IntelliJ** o **Eclipse**).
+2. Asegúrate de que los archivos `inventario.dat` y `usuarios.dat` estén en la carpeta del proyecto.  
+   - No te preocupes si no están: el sistema los crea automáticamente la primera vez que se ejecuta.
+3. Busca y ejecuta la clase `Main.java`.
+4. Aparecerá una ventana para iniciar sesión.
+5. Puedes:
+   - Iniciar sesión si ya tienes un usuario.
+   - Registrar un usuario nuevo si aún no tienes uno.
+6. Una vez inicies sesión correctamente, verás la ventana principal con el inventario.
+
+### 💡 Nota Importante
+  
+El sistema guarda automáticamente todos los cambios (productos y usuarios) cuando cierras la ventana principal.
+
+### 🧪 Notas útiles
+
+- Puedes probar el programa agregando, modificando o eliminando productos, así como creando nuevos usuarios.
+- Toda la información se guarda en dos archivos:
+  - `inventario.dat` → productos
+  - `usuarios.dat` → usuarios registrados
+- Si cierras el programa y lo vuelves a abrir, ¡los datos seguirán allí!
+
+---
+
 ## Contacto
 
 **Teléfono:** 3125860277  
