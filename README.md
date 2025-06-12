@@ -155,7 +155,7 @@ Es el punto de partida del programa, donde todo comienza.
 - Controla si se muestra o no la aplicación según el resultado del login.
   
 <p align="center">
-  <img src="https://raw.githubusercontent.com/CristianVarVer/Proyecto-CODA_V/fc09204107dc56b66670faec1f124a87e4c56316/Clase%20Main.png?token=BTCBO4LJRCS5VJRTB7NTN3LIJGT7W">
+  <img src="Clase Main.png">
 </p>
 
 ---
@@ -186,7 +186,7 @@ Es la ventana emergente que permite iniciar sesión en el sistema.
 - Permitir tanto login como registro de nuevos usuarios.
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/CristianVarVer/Proyecto-CODA_V/fc09204107dc56b66670faec1f124a87e4c56316/Clase%20Dialogo%20Login.png?token=BTCBO4IU5O6TGCUYKTYCVJLIJGT7W">
+  <img src="Clase Dialogo Login.png">
 </p>
 ---
 
@@ -239,7 +239,7 @@ Es la plantilla base para los usuarios del sistema.
 - Ser utilizado para validar el acceso mediante login.
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/CristianVarVer/Proyecto-CODA_V/fc09204107dc56b66670faec1f124a87e4c56316/Clase%20Usuario.png?token=BTCBO4KSW6VFD56ON6FMEZ3IJGT7W">
+  <img src="Clase Usuario.png">
 </p>
 
 ---
@@ -268,7 +268,7 @@ Es la ventana principal del sistema, donde se muestra y gestiona todo el inventa
 - Permite al usuario gestionar fácilmente los productos desde una tabla interactiva.
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/CristianVarVer/Proyecto-CODA_V/fc09204107dc56b66670faec1f124a87e4c56316/Clase%20Interfaz%20Grafica.png?token=BTCBO4OOMZ5YVLHER47JCWLIJGT7W">
+  <img src="Clase Interfaz Grafica.png">
 </p>
 
 ---
@@ -295,7 +295,7 @@ Es la ventana que se abre para agregar un nuevo producto.
 - Permitir añadir productos nuevos de forma segura y validada.
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/CristianVarVer/Proyecto-CODA_V/fc09204107dc56b66670faec1f124a87e4c56316/Clase%20Dialogo%20Agregar%20Producto.png?token=BTCBO4IWXQLDXPGJ7YB4AIDIJGT7W">
+  <img src="Clase Dialogo Agregar Producto.png">
 </p>
 
 ---
@@ -321,7 +321,7 @@ Ventana emergente para editar un producto ya existente.
 - Facilitar la edición de un producto del inventario de forma controlada.
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/CristianVarVer/Proyecto-CODA_V/fc09204107dc56b66670faec1f124a87e4c56316/Clase%20Diaologo%20Actualizar%20Producto.png?token=BTCBO4OBADKS5F33GPN4F63IJGT7W">
+  <img src="Clase Diaologo Actualizar Producto.png">
 </p>
 
 ---
@@ -346,7 +346,7 @@ Es la ficha técnica de cada producto.
 - Ser utilizado por las interfaces para mostrar y modificar datos.
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/CristianVarVer/Proyecto-CODA_V/fc09204107dc56b66670faec1f124a87e4c56316/Clase%20Producto.png?token=BTCBO4JKHTYEFGJXXZG3TCLIJGT7W">
+  <img src="Clase Producto.png">
 </p>
 
 ---
@@ -373,7 +373,7 @@ Es el motor lógico del sistema que gestiona todos los productos.
 - Servir de puente entre la interfaz y los datos reales.
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/CristianVarVer/Proyecto-CODA_V/fc09204107dc56b66670faec1f124a87e4c56316/Clase%20Inventario.png?token=BTCBO4OP5M3FFBZGVICQXADIJGT7W">
+  <img src="Clase Inventario.png">
 </p>
 
 ---
@@ -398,7 +398,7 @@ Es el encargado de guardar y cargar datos desde archivos.
 - Facilitar el almacenamiento automático de usuarios y productos.
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/CristianVarVer/Proyecto-CODA_V/fc09204107dc56b66670faec1f124a87e4c56316/Clase%20Manejador%20Datos.png?token=BTCBO4P6YFKHA2OEFAUB5D3IJGT7W">
+  <img src="Clase Manejador Datos.png">
 </p>
 
 ---
@@ -417,14 +417,14 @@ Es el encargado de guardar y cargar datos desde archivos.
 5. Todo lo que haces se gestiona con la lógica de `Inventario` y se guarda gracias a `ManejadorDatos`.
 
 <p align="left">
-  <img src="https://raw.githubusercontent.com/CristianVarVer/Proyecto-CODA_V/fc09204107dc56b66670faec1f124a87e4c56316/Diagrama%20UML-%20CODA-V.png?token=BTCBO4JAR66RCCPNGBBVSQTIJGT7W">
+  <img src="Diagrama UML- CODA-V.png">
 </p>
 
 ---
 
 ## Tecnologías Utilizadas
 
-- **Java 8+**
+- **Java 23+**
 - **Java Swing**: Para la interfaz gráfica de usuario.
 - **POO (Programación Orientada a Objetos)**: Modelo de diseño basado en clases.
 - **Serialización de Objetos**: Para guardar y cargar datos de usuarios e inventario.
@@ -438,7 +438,7 @@ Es el encargado de guardar y cargar datos desde archivos.
 
 ### 🖥️ Requisitos previos
 
-- Tener instalado **Java JDK 8 o superior**
+- Tener instalado **Java JDK 23 o superior**
 - Tener un IDE como **NetBeans**, **IntelliJ IDEA** o **Eclipse**
 - Descargar o clonar el repositorio de GitHub
 
