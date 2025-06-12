@@ -215,7 +215,7 @@ Es la ventana que se abre desde el login para crear un nuevo usuario.
 - Actualizar los datos de usuarios disponibles.
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/CristianVarVer/Proyecto-CODA_V/fc09204107dc56b66670faec1f124a87e4c56316/Clase%20Dialogo%20Registro.png?token=BTCBO4OBI5A5BVYPQ5PXGQDIJGT7W">
+  <img src="Clase Dialogo Registro.png">
 </p>
 ---
 
