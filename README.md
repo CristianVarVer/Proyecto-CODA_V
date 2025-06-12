@@ -1,5 +1,5 @@
 <p align="right">
-  <img src="https://raw.githubusercontent.com/CristianVarVer/Proyecto-CODA_V/e0e59307f3dad8654486b3b71cba306509095f8d/Logo%20CODA-V.jpg?token=BTCBO4NEUTM2UMCWZXSJYNLIJGT6E">
+  <img src="https://github.com/CristianVarVer/Proyecto-CODA_V/blob/master/Logo%20CODA-V.jpg">
 </p>
 
 # CODA-V
