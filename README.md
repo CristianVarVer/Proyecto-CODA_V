@@ -1,5 +1,5 @@
 <p align="right">
-  <img src="https://github.com/CristianVarVer/Proyecto-CODA_V/blob/master/Logo%20CODA-V.jpg">
+  <img src="CODA-V_FP/Imagenes-PNG/Logo CODA-V.jpg">
 </p>
 
 # CODA-V
@@ -41,7 +41,7 @@
 **Logo:**
 
 <p align="center">
-  <img src="https://github.com/CristianVarVer/Proyecto-CODA_V/blob/master/Logo%20CODA-V.jpg">
+  <img src="CODA-V_FP/Imagenes-PNG/Logo CODA-V.jpg">
 </p>
 
 **Eslogan del Proyecto:** “Ordena, controla, evoluciona”
@@ -155,7 +155,7 @@ Es el punto de partida del programa, donde todo comienza.
 - Controla si se muestra o no la aplicación según el resultado del login.
   
 <p align="center">
-  <img src="Clase Main.png">
+  <img src="CODA-V_FP/Imagenes-PNG/Clase Main.png">
 </p>
 
 ---
@@ -186,7 +186,7 @@ Es la ventana emergente que permite iniciar sesión en el sistema.
 - Permitir tanto login como registro de nuevos usuarios.
 
 <p align="center">
-  <img src="Clase Dialogo Login.png">
+  <img src="CODA-V_FP/Imagenes-PNG/Clase Dialogo Login.png">
 </p>
 ---
 
@@ -215,7 +215,7 @@ Es la ventana que se abre desde el login para crear un nuevo usuario.
 - Actualizar los datos de usuarios disponibles.
 
 <p align="center">
-  <img src="Clase Dialogo Registro.png">
+  <img src="CODA-V_FP/Imagenes-PNG/Clase Dialogo Registro.png">
 </p>
 ---
 
@@ -239,7 +239,7 @@ Es la plantilla base para los usuarios del sistema.
 - Ser utilizado para validar el acceso mediante login.
 
 <p align="center">
-  <img src="Clase Usuario.png">
+  <img src="CODA-V_FP/Imagenes-PNG/Clase Usuario.png">
 </p>
 
 ---
@@ -268,7 +268,7 @@ Es la ventana principal del sistema, donde se muestra y gestiona todo el inventa
 - Permite al usuario gestionar fácilmente los productos desde una tabla interactiva.
 
 <p align="center">
-  <img src="Clase Interfaz Grafica.png">
+  <img src="CODA-V_FP/Imagenes-PNG/Clase Interfaz Grafica.png">
 </p>
 
 ---
@@ -295,7 +295,7 @@ Es la ventana que se abre para agregar un nuevo producto.
 - Permitir añadir productos nuevos de forma segura y validada.
 
 <p align="center">
-  <img src="Clase Dialogo Agregar Producto.png">
+  <img src="CODA-V_FP/Imagenes-PNG/Clase Dialogo Agregar Producto.png">
 </p>
 
 ---
@@ -321,7 +321,7 @@ Ventana emergente para editar un producto ya existente.
 - Facilitar la edición de un producto del inventario de forma controlada.
 
 <p align="center">
-  <img src="Clase Diaologo Actualizar Producto.png">
+  <img src="CODA-V_FP/Imagenes-PNG/Clase Diaologo Actualizar Producto.png">
 </p>
 
 ---
@@ -346,7 +346,7 @@ Es la ficha técnica de cada producto.
 - Ser utilizado por las interfaces para mostrar y modificar datos.
 
 <p align="center">
-  <img src="Clase Producto.png">
+  <img src="CODA-V_FP/Imagenes-PNG/Clase Producto.png">
 </p>
 
 ---
@@ -373,7 +373,7 @@ Es el motor lógico del sistema que gestiona todos los productos.
 - Servir de puente entre la interfaz y los datos reales.
 
 <p align="center">
-  <img src="Clase Inventario.png">
+  <img src="CODA-V_FP/Imagenes-PNG/Clase Inventario.png">
 </p>
 
 ---
@@ -398,7 +398,7 @@ Es el encargado de guardar y cargar datos desde archivos.
 - Facilitar el almacenamiento automático de usuarios y productos.
 
 <p align="center">
-  <img src="Clase Manejador Datos.png">
+  <img src="CODA-V_FP/Imagenes-PNG/Clase Manejador Datos.png">
 </p>
 
 ---
@@ -417,7 +417,7 @@ Es el encargado de guardar y cargar datos desde archivos.
 5. Todo lo que haces se gestiona con la lógica de `Inventario` y se guarda gracias a `ManejadorDatos`.
 
 <p align="left">
-  <img src="Diagrama UML- CODA-V.png">
+  <img src="CODA-V_FP/Imagenes-PNG/Diagrama UML- CODA-V.png">
 </p>
 
 ---
