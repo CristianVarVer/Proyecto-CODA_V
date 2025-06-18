@@ -114,13 +114,16 @@ Desarrollar un programa moderno, funcional y accesible que permita a las tiendas
 
 ### Sprint 2
 
+- Implementación de la interfaz gráfica.
 - Programación completa de clases con métodos (agregar, actualizar, eliminar, consultar).
 - Validación de entradas del usuario.
 - Implementación del cálculo del valor total del inventario.
 - Desarrollo del menú completo y funcional.
 - Incorporación de diseño visual: menú, separadores, colores.
+- Creacion del programa de escritorio.exe.
 - Pruebas funcionales de CRUD.
-- Revisión y ajustes del modelo.
+- Revisión y ajustes finales del modelo.
+- Diseño del modelo lógico en forma de diagrama.
 - Avance en documentación técnica: manuales y diccionario de datos.
 
 ### Sprint 3
